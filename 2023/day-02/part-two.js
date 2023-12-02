@@ -1,6 +1,6 @@
 const fs = require("node:fs")
 
-const raw = fs.readFileSync("./sample.txt").toString('utf-8');
+const raw = fs.readFileSync("./inputs.txt").toString('utf-8');
 const inputs = raw.split('\n');
 
 let sum = 0;
@@ -27,14 +27,15 @@ for (const input of inputs) {
 		for (const val of values) {
 			const [num, color] = val.split(' ');
 
-			if (minSet[color] < num) {
-				minSet[color] = num;
+			if (minSet[color] < +num) {
+				minSet[color] = +num;
 			}
 		}
 	}
 	
-	// const gameId = game.split(' ')[1];
-	// sum += +gameId;
+	const gameId = game.split(' ')[1];
+	const pwr = minSet['red'] * minSet['green'] * minSet['blue'];
+	sum += +pwr;
 }
 
 console.log('Sum of possible games is: ', sum);

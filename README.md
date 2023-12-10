@@ -6,3 +6,6 @@ Focus is on getting slightly more comfortable with using neovim.
 Was initially interested in learning Go language, but focusing on both
 Go and neovim was too much at one time, so decided to stick to Javascript.
 
+#### Day 05
+Brute forced attack. Maybe a challenge for some other time :)
+
